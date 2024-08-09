@@ -20,9 +20,10 @@ body {
   visibility: visible;
   transition: opacity 600ms ease 800ms, visibility 600ms ease 800ms;
   position: absolute; /* Ensure it’s positioned properly within its container */
-  bottom: 20px; /* Adjust based on your layout */
+  bottom: 100px; /* Adjust based on your layout */
   left: 50%;
   transform: translateX(-50%);
+  margin-top:60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +76,8 @@ body {
   border-top: 6px solid #242424;
   transform: translateY(-50%);
   animation: scroll 1000ms infinite alternate-reverse;
-  top: 20px; /* Adjust this value to place the arrowhead correctly */
+  top:20px;
+
 }
 
 @keyframes scroll {
@@ -322,9 +324,8 @@ body {
     font-size: 1.2rem;
   }
   .scroll, 
-  .scroll__icon:before,
-  .scroll__icon:after{
-    top:45%;
+  .scroll__icon:before{
+    top:50%;
     
   }
 
@@ -333,9 +334,7 @@ body {
     margin-right:auto;
     font-size: 11px;
     width: 100px;
-    top:40%;
-    
-    
+    margin-top:40px; 
   }
 
   .get-in-touch-button,
@@ -354,7 +353,7 @@ body {
   .hero-container {
     width:100%;
   }
-  
+
   .hero-header {
     font-size: 1.5rem;
   }
@@ -371,13 +370,15 @@ body {
   .scroll__icon:before,
   .scroll__icon:after{
     margin-bottom:0;
-    top:25%;
+    margin-top:0;
+  
+}
     
   }
 
    .scroll{
-    height:100px;
-    top:55%;
+    height:0px;
+    margin-top:55px;
   }
 
   .scroll__text {
@@ -385,10 +386,11 @@ body {
     font-size: 10px;
     height:auto;
     width: 80px;
-    top:0;
+   margin-top:-30px;
     margin-left:auto;
     margin-right:auto;
   }
+ 
 
   .get-in-touch-button,
   .view-my-work-button {
@@ -400,6 +402,6 @@ body {
   .falling-icon div img {
     width: 30px;
   }
-}
+
 
   
