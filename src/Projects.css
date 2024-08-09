@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Outfit');
+
+.projects-section { 
+   /* background: linear-gradient(180deg, #bbe2f0 25%, rgba(187, 226, 240, 0.9736842105) 26.9736842105%, rgba(187, 226, 240, 0.9473684211) 28.9473684211%, rgba(187, 226, 240, 0.9210526316) 30.9210526316%, rgba(187, 226, 240, 0.8947368421) 32.8947368421%, rgba(187, 226, 240, 0.8684210526) 34.8684210526%, rgba(187, 226, 240, 0.8421052632) 36.8421052632%, rgba(187, 226, 240, 0.8157894737) 38.8157894737%, rgba(187, 226, 240, 0.7894736842) 40.7894736842%, rgba(187, 226, 240, 0.7631578947) 42.7631578947%, rgba(187, 226, 240, 0.7368421053) 44.7368421053%, rgba(187, 226, 240, 0.7105263158) 46.7105263158%, rgba(187, 226, 240, 0.6842105263) 48.6842105263%, rgba(187, 226, 240, 0.6578947368) 50.6578947368%, rgba(187, 226, 240, 0.6315789474) 52.6315789474%, rgba(187, 226, 240, 0.6052631579) 54.6052631579%, rgba(187, 226, 240, 0.5789473684) 56.5789473684%, rgba(187, 226, 240, 0.5526315789) 58.5526315789%, rgba(187, 226, 240, 0.5263157895) 60.5263157895%, rgba(187, 226, 240, 0.5) 62.5%, rgba(187, 226, 240, 0.4736842105) 64.4736842105%, rgba(187, 226, 240, 0.4473684211) 66.4473684211%, rgba(187, 226, 240, 0.4210526316) 68.4210526316%, rgba(187, 226, 240, 0.3947368421) 70.3947368421%, rgba(187, 226, 240, 0.3684210526) 72.3684210526%, rgba(187, 226, 240, 0.3421052632) 74.3421052632%, rgba(187, 226, 240, 0.3157894737) 76.3157894737%, rgba(187, 226, 240, 0.2894736842) 78.2894736842%, rgba(187, 226, 240, 0.2631578947) 80.2631578947%, rgba(187, 226, 240, 0.2368421053) 82.2368421053%, rgba(187, 226, 240, 0.2105263158) 84.2105263158%, rgba(187, 226, 240, 0.1842105263) 86.1842105263%, rgba(187, 226, 240, 0.1578947368) 88.1578947368%, rgba(187, 226, 240, 0.1315789474) 90.1315789474%, rgba(187, 226, 240, 0.1052631579) 92.1052631579%, rgba(187, 226, 240, 0.0789473684) 94.0789473684%, rgba(187, 226, 240, 0.0526315789) 96.0526315789%, rgba(187, 226, 240, 0.0263157895) 98.0263157895%, rgba(187, 226, 240, 0));
+    */
+    width: 100vw; /* Ensure it spans the full width of the viewport */
+    margin-left: calc(50% - 50vw);
+    margin-top:400px; 
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .projects-section h1{
+    background-color:  #bbe2f0;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    margin:0;
+    width: 100vw;
+    font-weight: 700;
+    text-align: center;
+    font-size: 45px;
+    height:80px;
+    padding-top:15px;
+  }
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 5px; /* Space between grid items */
+    padding: 5px;  
+}
+  
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .project-image {
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+.project-info{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  width: calc(100% - 20px); /* Adjust width to fit within the padding */
+    
+  }
+  
+  .project-name {
+    color:white;
+    font-size: 1.5rem;
+    margin: 0px 0;
+    padding:10px;
+    padding-top:0;
+
+  }
+  .project-card:nth-child(1) .project-button,
+  .project-card:nth-child(4) .project-button{
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #007bff;
+
+  }
+
+  .project-card:nth-child(1) .project-button:hover,
+  .project-card:nth-child(4) .project-button:hover {
+    background-color: #007bff;
+    color:white;
+  }
+
+  .project-card:nth-child(2) .project-button,
+  .project-card:nth-child(3) .project-button{
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+  }
+
+  .project-card:nth-child(2) .project-button:hover,
+  .project-card:nth-child(3) .project-button:hover {
+    background-color: white;
+    color:#007bff;
+  }
+
+  
+  .project-button {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid 007bff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    height:40px;
+    width: auto;
+    font-size: 15px;
+  }
+  
+  .project-button:hover {
+    background-color: #0056b3;
+  }
+
+  .project-info-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #bbe2f0 25%, rgba(187, 226, 240, 0.9736842105) 26.9736842105%, rgba(187, 226, 240, 0.9473684211) 28.9473684211%, rgba(187, 226, 240, 0.9210526316) 30.9210526316%, rgba(187, 226, 240, 0.8947368421) 32.8947368421%, rgba(187, 226, 240, 0.8684210526) 34.8684210526%, rgba(187, 226, 240, 0.8421052632) 36.8421052632%, rgba(187, 226, 240, 0.8157894737) 38.8157894737%, rgba(187, 226, 240, 0.7894736842) 40.7894736842%, rgba(187, 226, 240, 0.7631578947) 42.7631578947%, rgba(187, 226, 240, 0.7368421053) 44.7368421053%, rgba(187, 226, 240, 0.7105263158) 46.7105263158%, rgba(187, 226, 240, 0.6842105263) 48.6842105263%, rgba(187, 226, 240, 0.6578947368) 50.6578947368%, rgba(187, 226, 240, 0.6315789474) 52.6315789474%, rgba(187, 226, 240, 0.6052631579) 54.6052631579%, rgba(187, 226, 240, 0.5789473684) 56.5789473684%, rgba(187, 226, 240, 0.5526315789) 58.5526315789%, rgba(187, 226, 240, 0.5263157895) 60.5263157895%, rgba(187, 226, 240, 0.5) 62.5%, rgba(187, 226, 240, 0.4736842105) 64.4736842105%, rgba(187, 226, 240, 0.4473684211) 66.4473684211%, rgba(187, 226, 240, 0.4210526316) 68.4210526316%, rgba(187, 226, 240, 0.3947368421) 70.3947368421%, rgba(187, 226, 240, 0.3684210526) 72.3684210526%, rgba(187, 226, 240, 0.3421052632) 74.3421052632%, rgba(187, 226, 240, 0.3157894737) 76.3157894737%, rgba(187, 226, 240, 0.2894736842) 78.2894736842%, rgba(187, 226, 240, 0.2631578947) 80.2631578947%, rgba(187, 226, 240, 0.2368421053) 82.2368421053%, rgba(187, 226, 240, 0.2105263158) 84.2105263158%, rgba(187, 226, 240, 0.1842105263) 86.1842105263%, rgba(187, 226, 240, 0.1578947368) 88.1578947368%, rgba(187, 226, 240, 0.1315789474) 90.1315789474%, rgba(187, 226, 240, 0.1052631579) 92.1052631579%, rgba(187, 226, 240, 0.0789473684) 94.0789473684%, rgba(187, 226, 240, 0.0526315789) 96.0526315789%, rgba(187, 226, 240, 0.0263157895) 98.0263157895%, rgba(187, 226, 240, 0));
+    width: 100%;
+    height: 500px;
+    
+}
+.project-info-back h2 {
+  margin: 5px 0;
+  font-size: 35px;
+  font-weight:600;
+  font-style: oblique;
+  color:#0071e3;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tech-stack-bold{
+  font-weight:bold;
+  font-style: italic;
+  font-size: 1rem;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.project-info-back p {
+    padding:15px;
+    margin: 5px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.project-info-back button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.project-info-back button:hover {
+    background-color: #0056b3;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-link-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.project-links a {
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.project-links a:hover {
+  color: #007BFF;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+
+  #projects-section h1{
+    font-size:2.0rem;
+    height:50px;
+    margin-top:-50%;
+
+  }
+  .projects-container {
+      grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .project-image {
+      height: 300px; /* Adjust the height for smaller screens */
+  }
+
+  .project-info-back {
+      height: auto; /* Allow height to adjust based on content */
+  }
+
+  .project-info-back h2 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .project-info-back p {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .project-button {
+      font-size: 0.9rem; /* Adjust button size for smaller screens */
+  }
+
+  .project-links a {
+      font-size: 0.9rem; /* Adjust link font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+
+  #projects-section h1{
+    font-size: 1.7rem;
+    height:50px;
+    margin-top:-90%;
+
+  }
+  #projects-section h3{
+    font-size: 1.3rem;
+   
+
+  }
+
+  .projects-container {
+      grid-template-columns: 1fr; /* Maintain single column layout */
+  }
+
+  .project-image {
+      height: 200px; /* Further adjust the height for very small screens */
+  }
+
+  .project-info-back h2 {
+      font-size: 1.2rem; /* Further reduce font size for very small screens */
+  }
+
+  .project-info-back p {
+      font-size: 0.9rem; /* Further reduce paragraph size */
+  }
+
+  .project-button {
+      font-size: 0.8rem; /* Further adjust button size */
+  }
+
+  .project-links a {
+      font-size: 0.8rem; /* Further adjust link font size */
+  }
+}
+

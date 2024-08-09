@@ -1,0 +1,94 @@
+  
+    footer {
+        margin-top:100px;
+        position: relative;
+        height:auto;
+        background-color: #242424;
+        display: flex;
+        justify-content: center; /* Centering the content horizontally */
+        padding: 4% 0;
+        width: 100vw;
+        box-sizing: border-box;
+         /* Ensure it spans the full width of the viewport */
+         margin-left: calc(50% - 50vw);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px; /* or any max-width you prefer */
+    margin: 0 auto;
+    padding: 0 20px; /* Optional: to add some padding on the sides */
+  }
+  
+  .footer__row {
+    font-size:1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer__logo--img {
+    width: 100px;
+  }
+  
+  .footer__social--list {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .footer__social--link,
+  .footer__copyright {
+    color: white;
+  }
+
+  .footer__logo--popper {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+    color: white;
+  }
+  
+  .footer__anchor {
+    position: relative;
+  }
+  
+  .footer__anchor:hover .footer__logo--popper {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+    .footer__social--list {
+        flex-direction: column; /* Stack social icons vertically on smaller screens */
+        align-items: center;
+    }
+
+    .footer__social--link {
+        margin-bottom: 10px; /* Add some space between the links when stacked */
+    }
+
+    .footer__row {
+        text-align: center; /* Center-align text on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__row {
+        font-size: 1rem; /* Decrease font size for very small screens */
+    }
+
+    .footer__social--list {
+        margin: 10px 0;
+    }
+
+    .footer__logo--img {
+        width: 80px; /* Adjust logo size for very small screens */
+    }
+}

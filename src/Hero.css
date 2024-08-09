@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css?family=Outfit');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900i');
+
+
+body {
+    padding:0;
+    margin:0, auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    width:auto;
+}
+
+
+/**Scroll Icon css **/
+.scroll {
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 600ms ease 800ms, visibility 600ms ease 800ms;
+  position: absolute; /* Ensure it’s positioned properly within its container */
+  bottom: 20px; /* Adjust based on your layout */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll__text {
+  width:120px;
+  font-size: 13px;
+  position: absolute;
+  top: 0%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%); /* Correct centering due to position absolute */
+  z-index: 1; /* Ensure the text is above the icon */
+  padding: 0 5px; /* Optional: padding for readability */
+}
+
+.scroll__icon {
+  width: 40px;
+  height: 40px;
+  margin-top:25px;
+  border: 2px solid #242424;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.scroll__icon:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  margin-top: 30px;
+  height: 16px;
+  background-color: #242424;
+  transform: translateY(-50%);
+  animation: scroll 1000ms infinite alternate-reverse;
+  top: 8px; /* Adjust this value to center the arrow vertically */
+}
+
+.scroll__icon:after {
+  content: "";
+  position: absolute;
+  width: 1.5px;
+  margin-top: 30px;
+  height: 0px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #242424;
+  transform: translateY(-50%);
+  animation: scroll 1000ms infinite alternate-reverse;
+  top: 20px; /* Adjust this value to place the arrowhead correctly */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(3px);
+  }
+  
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+/**Hero Css**/
+  
+  .hero-container {
+    background: linear-gradient(180deg, #BBE2F0 25%, rgba(187, 226, 240, 0.9736842105) 26.9736842105%, rgba(187, 226, 240, 0.9473684211) 28.9473684211%, rgba(187, 226, 240, 0.9210526316) 30.9210526316%, rgba(187, 226, 240, 0.8947368421) 32.8947368421%, rgba(187, 226, 240, 0.8684210526) 34.8684210526%, rgba(187, 226, 240, 0.8421052632) 36.8421052632%, rgba(187, 226, 240, 0.8157894737) 38.8157894737%, rgba(187, 226, 240, 0.7894736842) 40.7894736842%, rgba(187, 226, 240, 0.7631578947) 42.7631578947%, rgba(187, 226, 240, 0.7368421053) 44.7368421053%, rgba(187, 226, 240, 0.7105263158) 46.7105263158%, rgba(187, 226, 240, 0.6842105263) 48.6842105263%, rgba(187, 226, 240, 0.6578947368) 50.6578947368%, rgba(187, 226, 240, 0.6315789474) 52.6315789474%, rgba(187, 226, 240, 0.6052631579) 54.6052631579%, rgba(187, 226, 240, 0.5789473684) 56.5789473684%, rgba(187, 226, 240, 0.5526315789) 58.5526315789%, rgba(187, 226, 240, 0.5263157895) 60.5263157895%, rgba(187, 226, 240, 0.5) 62.5%, rgba(187, 226, 240, 0.4736842105) 64.4736842105%, rgba(187, 226, 240, 0.4473684211) 66.4473684211%, rgba(187, 226, 240, 0.4210526316) 68.4210526316%, rgba(187, 226, 240, 0.3947368421) 70.3947368421%, rgba(187, 226, 240, 0.3684210526) 72.3684210526%, rgba(187, 226, 240, 0.3421052632) 74.3421052632%, rgba(187, 226, 240, 0.3157894737) 76.3157894737%, rgba(187, 226, 240, 0.2894736842) 78.2894736842%, rgba(187, 226, 240, 0.2631578947) 80.2631578947%, rgba(187, 226, 240, 0.2368421053) 82.2368421053%, rgba(187, 226, 240, 0.2105263158) 84.2105263158%, rgba(187, 226, 240, 0.1842105263) 86.1842105263%, rgba(187, 226, 240, 0.1578947368) 88.1578947368%, rgba(187, 226, 240, 0.1315789474) 90.1315789474%, rgba(187, 226, 240, 0.1052631579) 92.1052631579%, rgba(187, 226, 240, 0.0789473684) 94.0789473684%, rgba(187, 226, 240, 0.0526315789) 96.0526315789%, rgba(187, 226, 240, 0.0263157895) 98.0263157895%, rgba(187, 226, 240, 0));
+    margin-top: 0px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-top:150px;
+    text-align: center;
+    height:500px;
+  }
+
+  .hero-header{
+    font-size: 70px;
+    font-weight:600;
+    font-family: Roboto, sans-serif;
+  }
+
+  .wave {
+    font-size: 70px;
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+.hero-container p {
+  padding-top: 0px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+
+/* Keyframes for sliding out */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Keyframes for sliding in */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Classes for the sliding animations */
+.slide-out {
+  animation: slideOut 0.5s forwards;
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+/* Button styling */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+
+}
+
+.get-in-touch-button,
+.view-my-work-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0 10px; /* Add margin to both buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.get-in-touch-button {
+  background-color: #0071e3;
+  border: 1px solid 0071e3;
+}
+
+.view-my-work-button {
+  background-color: #fff;
+  color: #0071e3;
+  border: 1px solid #0071e3;
+
+}
+
+/* Hover effect */
+.get-in-touch-button:hover {
+  background-color: darkblue; /* Change background color on hover */
+}
+.view-my-work-button:hover{
+  background-color:#0071e3;
+  color:#fff;
+}
+
+/**Falling Icon animation css**/
+.falling-icon {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+}
+
+.falling-icon div {
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.1); /* Light grey color for background effect */
+  pointer-events: none; /* Ensure it doesn't interfere with other elements */
+}
+
+.falling-icon div img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+}
+
+.falling-icon div:nth-child(1) {
+  left: 7%;
+  animation: fall 15s linear infinite;
+  animation-delay: -2s;
+}
+
+.falling-icon div:nth-child(2) {
+  left: 80%;
+  animation: fall 15s linear infinite;
+  animation-delay: -9s;
+}
+
+.falling-icon div:nth-child(3) {
+  left: 18%;
+  animation: fall 20s linear infinite;
+  animation-delay: -7s;
+}
+
+.falling-icon div:nth-child(4) {
+  left: 95%;
+  animation: fall 16s linear infinite;
+  animation-delay: -5s;
+}
+
+
+.falling-icon div:nth-child(5) {
+  left: 88%;
+  animation: fall 20s linear infinite;
+  animation-delay: -5s;
+}
+
+.falling-icon div:nth-child(6) {
+  left: 13%;
+  animation: fall 14s linear infinite;
+  animation-delay: -7s;
+}
+
+.falling-icon div:nth-child(7) {
+  left: 75%;
+  animation: fall 16s linear infinite;
+  animation-delay: -4s;
+}
+
+.falling-icon div:nth-child(8) {
+  left: 25%;
+  animation: fall 7s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: translateX(20px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-20px) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-20px) rotate(180deg);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-20px) rotate(315deg);
+  }
+  100% {
+    opacity: 0;
+    top: 110%;
+    transform: translateX(-20px) rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-container {
+    width:100%;
+  }
+
+  .hero-header {
+    font-size: 2rem;
+  }
+
+  .wave {
+    font-size: 2rem;
+  }
+
+  .hero-container p {
+    font-size: 1.2rem;
+  }
+  .scroll, 
+  .scroll__icon:before,
+  .scroll__icon:after{
+    top:45%;
+    
+  }
+
+  .scroll__text {
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 11px;
+    width: 100px;
+    top:40%;
+    
+    
+  }
+
+  .get-in-touch-button,
+  .view-my-work-button {
+    font-size: 12px;
+    padding: 8px 16px;
+    margin: 5px;
+  }
+
+  .falling-icon div img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    width:100%;
+  }
+  
+  .hero-header {
+    font-size: 1.5rem;
+  }
+
+  .wave {
+    font-size: 1.5rem;
+  }
+
+  .hero-container p {
+    font-size: 1rem;
+  }
+
+  .scroll__icon.click,
+  .scroll__icon:before,
+  .scroll__icon:after{
+    margin-bottom:0;
+    top:25%;
+    
+  }
+
+   .scroll{
+    height:100px;
+    top:55%;
+  }
+
+  .scroll__text {
+
+    font-size: 10px;
+    height:auto;
+    width: 80px;
+    top:0;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .get-in-touch-button,
+  .view-my-work-button {
+    font-size: 10px;
+    padding: 6px 12px;
+    margin: 3px;
+  }
+
+  .falling-icon div img {
+    width: 30px;
+  }
+}
+
+  

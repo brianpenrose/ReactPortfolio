@@ -1,0 +1,194 @@
+/* About.css */
+
+.about-me-container {
+    width:auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    gap: 20px;
+    padding: 20px;
+    margin-top: 200px; /* Adjust the top margin as needed */
+    padding-left: 20px; /* Add padding to the left to create white space */
+    padding-right: 20px; /* Add padding to the right to create white space */    
+    font-family: 'Outfit', sans-serif;
+}
+
+.about-me-content {
+    display: flex; /* Ensure the "About me" and "AboutMeIcon" are in a row */
+    width:100%;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+.about-me-item-left {
+    background-color: #fff; /* Ensure background color matches your website */
+    padding: 20px;
+    border-radius: 8px;
+    height: 350px;
+    font-size: 18px;
+    width: 600px;
+    text-align: center;
+    margin-right:30px;
+}
+
+.about-me-item-img{
+    background-color: #fff; /* Ensure background color matches your website */
+    padding: 20px;
+    border-radius: 8px;
+    height: 400px;
+    font-size: 18px;
+    width: 300px;
+    text-align: center;
+    margin-left:0px;
+}
+
+.about-me-item-img img{
+    margin-left:100px;
+    margin-top:100px;
+   height:250px;
+   width:250px;
+   
+}
+
+.about-me-item-right-img{
+    text-align: center;
+    height:300px;
+    width:900px;
+}
+
+.about-me-item-right-img h3{
+    padding:30px;
+}
+
+.about-me-container h3 {
+    font-size: 50px; /* Adjust the font size of the headers */
+    margin:15px;
+    color:#0071e3;
+}
+
+.image-container {
+    background-color: #fff; /* Match this color to your website's background */
+    padding: 10px; /* Optional: Add some padding around the image */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    width: 100%; /* Ensure the container takes up the full width */
+    max-width:600px; /* Limit the maximum width of the container */
+    overflow: hidden; /* Hide any overflow */
+    text-align: center; /* Center the image horizontally */
+}
+
+img {
+    max-width: 100%; 
+    max-height: auto; /* Ensure the image does not exceed the container's width */
+    height: auto; /* Maintain the aspect ratio */
+    display: flex;
+    margin-top: -20px; /* Adjust the margin as needed */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-me-content {
+        margin-top:-170px;
+        margin-left:0;
+      margin-right:auto;
+      flex-direction: column;
+      align-items: center;
+      height:auto;
+      
+    }
+    .about-me-container h3 {
+        margin-left:auto;
+        font-size: 1.8rem; /* Reduce font size for very small screens */
+      }
+  
+    .about-me-item-left,
+    .about-me-item-img{
+      width: auto; /* Adjust width for smaller screens */
+      max-width: 100%; /* Remove maximum width restriction */
+      margin: 0px 0; /* Add vertical margin */
+      align-items: center;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+    
+    }
+    .about-me-item-img img{
+        margin-top:-10%;
+        margin-left:auto;
+    }
+
+    .about-me-item-right-img{
+        width: 80%; /* Adjust width for smaller screens */
+      max-width: 100%; /* Remove maximum width restriction */
+      margin: 10px 0; /* Add vertical margin */
+      align-items: center;
+      height:auto;
+
+    }
+  
+    .about-me-item-img img {
+      height: 200px;
+      width: 200px;
+      align-items: center;
+      
+    }
+  
+    .about-me-item-right-img h3 {
+      font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+
+    .about-me-content {
+        margin-top:-270px;
+        margin-left:0;
+        margin-right:auto;
+        flex-direction: column;
+        align-items: center;
+        height:auto;
+        
+      }
+      .about-me-container h3 {
+          font-size: 1.3rem; /* Reduce font size for very small screens */
+        }
+        .about-me-container p {
+            font-size: 1rem; /* Reduce font size for very small screens */
+          }
+    
+      .about-me-item-left,
+      .about-me-item-img{
+        width:auto; /* Adjust width for smaller screens */
+        max-width: 100%; /* Remove maximum width restriction */
+        margin: 0px 0; /* Add vertical margin */
+        align-items: center;
+        height:auto;
+      
+      }
+      .about-me-item-img{
+        margin-left:0;
+        padding:0;
+        margin-top:0%;
+      }
+  
+      .about-me-item-right-img{
+          width: 80%; /* Adjust width for smaller screens */
+        max-width: 100%; /* Remove maximum width restriction */
+        margin: 10px 0; /* Add vertical margin */
+        align-items: center;
+        height:auto;
+  
+      }
+    
+      .about-me-item-img img {
+        height: 200px;
+        width: 200px;
+        align-items: center;
+        
+      }
+    
+      .about-me-item-right-img h3 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+      }
+    }
