@@ -23,7 +23,6 @@ body {
   bottom: 100px; /* Adjust based on your layout */
   left: 50%;
   transform: translateX(-50%);
-  margin-top:60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +32,6 @@ body {
   width:120px;
   font-size: 13px;
   position: absolute;
-  top: 0%; /* Center the text vertically */
   left: 50%; /* Center the text horizontally */
   transform: translate(-50%, -50%); /* Correct centering due to position absolute */
   z-index: 1; /* Ensure the text is above the icon */
@@ -43,7 +41,7 @@ body {
 .scroll__icon {
   width: 40px;
   height: 40px;
-  margin-top:25px;
+  margin-top:60px;
   border: 2px solid #242424;
   border-radius: 24px;
   display: flex;
@@ -62,7 +60,7 @@ body {
   background-color: #242424;
   transform: translateY(-50%);
   animation: scroll 1000ms infinite alternate-reverse;
-  top: 8px; /* Adjust this value to center the arrow vertically */
+  margin-top: 0px; /* Adjust this value to center the arrow vertically */
 }
 
 .scroll__icon:after {
@@ -76,7 +74,7 @@ body {
   border-top: 6px solid #242424;
   transform: translateY(-50%);
   animation: scroll 1000ms infinite alternate-reverse;
-  top:20px;
+  margin-top:20px;
 
 }
 
@@ -323,9 +321,9 @@ body {
   .hero-container p {
     font-size: 1.2rem;
   }
-  .scroll, 
+ 
   .scroll__icon:before{
-    top:50%;
+    margin-top:0px;
     
   }
 
@@ -334,7 +332,7 @@ body {
     margin-right:auto;
     font-size: 11px;
     width: 100px;
-    margin-top:40px; 
+    margin-top:0px; 
   }
 
   .get-in-touch-button,
@@ -366,30 +364,30 @@ body {
     font-size: 1rem;
   }
 
-  .scroll__icon.click,
-  .scroll__icon:before,
+  
+  .scroll__icon:before{
+    margin-bottom:0;
+    margin-top:0px;
+}
+
+.scroll__icon.click{
+  margin-top:-450px;
+}
+
   .scroll__icon:after{
     margin-bottom:0;
-    margin-top:0;
+    margin-top:10px;
   
 }
-    
-  }
 
-   .scroll{
-    height:0px;
-    margin-top:55px;
-  }
+.scroll__text {
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 11px;
+  width: 100px;
+  margin-top:-500px; 
+}
 
-  .scroll__text {
-
-    font-size: 10px;
-    height:auto;
-    width: 80px;
-   margin-top:-30px;
-    margin-left:auto;
-    margin-right:auto;
-  }
  
 
   .get-in-touch-button,
@@ -402,6 +400,8 @@ body {
   .falling-icon div img {
     width: 30px;
   }
+
+}
 
 
   
