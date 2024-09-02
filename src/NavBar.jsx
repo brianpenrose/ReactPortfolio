@@ -37,7 +37,7 @@ const Navbar = ({ openModal, scrollToProjects }) => {
           <a href="/" className="nav-link" onClick={(e) => handleLinkClick(e, 'projects')}>Project</a>
         </li>
         <li className="nav-item">
-          <a href="/reactPortfolio/BrianpenroseResumeNEW1.pdf" target="_blank" className="nav-link">Resume</a>
+          <a href="/reactPortfolio/public/BrianpenroseResumeNEW1.pdf" target="_blank" className="nav-link">Resume</a>
         </li>
         <li className="nav-item">
           <a href="/" className="nav-link" onClick={(e) => handleLinkClick(e, 'contact')}>Contact</a>
