@@ -290,7 +290,7 @@
 
 @media (max-width: 480px),(max-width:550px) {
     .modal.modal--open{
-        margin-top:50%;
+        margin-top:100%;
         height:auto;
     }
     .modal__title {
