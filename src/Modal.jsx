@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import './Modal.css';
+import emailjs from 'emailjs-com';
 import { FaTimes, FaSpinner } from 'react-icons/fa';
 import Code from './assets/objects/code.png';
 import ReactIcon from './assets/objects/reacticon.png';
@@ -24,23 +25,36 @@ const Modal = ({ isOpen, toggleModal }) => {
     }, [isOpen]);
   
     const contact = (event) => {
-      event.preventDefault();
-      setIsLoading(true);
+        event.preventDefault();
+        setIsLoading(true);
   
-      // Simulate an API call
-      setTimeout(() => {
-        setIsLoading(false);
-        setIsSuccess(true);
+        // Sending email via EmailJS
+        emailjs.sendForm(
+          'service_k62c3lm', // Replace with your EmailJS service ID
+          'template_9m658jb', // Replace with your EmailJS template ID
+          event.target,
+          'TKA3jXiPZAIRs4M3c' // Replace with your EmailJS user ID
+        ).then(
+          (result) => {
+            console.log(result.text);
+            setIsLoading(false);
+            setIsSuccess(true);
   
-        // Hide the success message after a few seconds
-        setTimeout(() => {
-          setIsSuccess(false);
-          toggleModal();
-        }, 3000);
+            // Hide the success message after a few seconds
+            setTimeout(() => {
+              setIsSuccess(false);
+              toggleModal();
+            }, 3000);
   
-        event.target.reset();
-      }, 2000);
-    };
+            event.target.reset();
+          },
+          (error) => {
+            console.log(error.text);
+            setIsLoading(false);
+            // You can add error handling logic here if needed
+          }
+        );
+      };
 
   return (
     <>
