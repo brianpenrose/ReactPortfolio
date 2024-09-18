@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import Body from "./Hero";
 import Navbar from "./NavBar";
 import About from "./About";
@@ -6,10 +7,18 @@ import Projects from "./Projects";
 import Modal from "./Modal";
 import Footer from "./Footer";
 
+
 export default function App() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState('');
   const projectsRef = useRef(null);
+
+  useEffect(() => {
+    
+    ReactGA.initialize('G-6RKBS3BRQ6');
+
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search });
+  }, []);
 
   const openModal = (content) => {
     setModalContent(content);
