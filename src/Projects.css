@@ -202,7 +202,7 @@
   }
 
   .project-image {
-      height: 300px; /* Adjust the height for smaller screens */
+      height: 350px; /* Adjust the height for smaller screens */
   }
 
   .project-info-back {
@@ -231,13 +231,10 @@
   #projects-section h1{
     font-size: 1.7rem;
     height:50px;
-    margin-top:-90%;
-
+    margin-top:-90%
   }
   #projects-section h3{
     font-size: 1.3rem;
-   
-
   }
 
   .projects-container {
@@ -245,7 +242,10 @@
   }
 
   .project-image {
-      height: 200px; /* Further adjust the height for very small screens */
+      height: 400px; /* Further adjust the height for very small screens */
+  }
+  .project-card{
+    margin:0;
   }
 
   .project-info-back h2 {
